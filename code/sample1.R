@@ -100,8 +100,11 @@ topic3 <- c("Individualized Education Program (IEP)",
             "Speech and Language Therapy",
             "Inclusion vs. Segregation")
 
-# Concatenate the topics into a single string
+# concatenate the topics into a single string
 concatenated_topic3 <- paste(topic3, collapse = ", ")
 
-# Print the concatenated topics
-cat(concatenated_topics)
+# print the concatenated topics
+cat(concatenated_topic1)
+cat(concatenated_topic2)
+cat(concatenated_topic3)
+
