@@ -20,10 +20,14 @@ library("SnowballC")
 library("wordcloud")
 library("RColorBrewer")
 
-txt_dir <- getwd()
+# locate data files
+getwd()
+
+txt_dir <- "/Users/nathanalexander/Dropbox/Projects/educ480-template/data" # insert location of data
 
 # import the the .txt files
 docs <- Corpus(DirSource(txt_dir))
+inspect()
 corpus(docs)
 
 # preprocess the documents
@@ -32,7 +36,7 @@ docs <- tm_map(docs, removeNumbers) # Remove numbers
 docs <- tm_map(docs, removePunctuation) # Remove punctuation
 docs <- tm_map(docs, removeWords, stopwords("english")) # Remove stopwords
 docs <- tm_map(docs, stripWhitespace) # Strip whitespace
-docs <- tm_map(docs, removeWords, c("additional", "custom", "stopwords")) # Remove additional custom stopwords if required
+docs <- tm_map(docs, removeWords, c("can", "a", "but")) # Remove additional custom stopwords if required
 
 # create a document-term matrix
 dtm <- DocumentTermMatrix(docs)
