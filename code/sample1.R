@@ -57,6 +57,7 @@ for (i in 1:num_topics) {
 
 # define document metadata (e.g., category)
 
+# topic 1 terms
 topic1 <- c("diversity",
             "education",
             "multicultural",
@@ -71,6 +72,7 @@ topic1 <- c("diversity",
 
 concatenated_topic1 <- paste(topic1, collapse = ", ") # create a single string of text
 
+# topic 2 terms
 topic2 <- c("responsive",
             "pedagogy",
             "equity",
@@ -86,7 +88,7 @@ topic2 <- c("responsive",
 
 concatenated_topic2 <- paste(topic2, collapse = ", ") # create a single stirng of text
 
-# Create a list of topics
+# topic 3 terms
 topic3 <- c("Individualized Education Program (IEP)",
             "Inclusive Education",
             "Differentiated Instruction",
