@@ -20,7 +20,7 @@ library("SnowballC")
 library("wordcloud")
 library("RColorBrewer")
 
-txt_dir <- "/Users/nathanalexander/Dropbox/Projects/educ480-sp24/data"
+txt_dir <- getwd()
 
 # import the the .txt files
 docs <- Corpus(DirSource(txt_dir))
