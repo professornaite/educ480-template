@@ -27,7 +27,6 @@ txt_dir <- "/Users/nathanalexander/Dropbox/Projects/educ480-template/data" # ins
 
 # import the the .txt files
 docs <- Corpus(DirSource(txt_dir))
-inspect()
 corpus(docs)
 
 # preprocess the documents
@@ -41,9 +40,15 @@ docs <- tm_map(docs, removeWords, c("can", "a", "but")) # Remove additional cust
 # create a document-term matrix
 dtm <- DocumentTermMatrix(docs)
 dtm
+View(dtm)
+m <- as.matrix(dtm)
+v <- sort(rowSums(m),decreasing=TRUE)
+d <- data.frame(word = names(v),freq=v)
+head(d, 10)
 
 # Convert the document-term matrix to a matrix of word frequencies
 dtm <- as.matrix(dtm)
+
 
 # Set the number of topics
 num_topics <- 3
